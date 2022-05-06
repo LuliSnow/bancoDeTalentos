@@ -1,0 +1,30 @@
+html, body {
+    height: 100%;
+}
+
+nav {
+    background-color: rosybrown;
+    padding: 10px;
+    margin-bottom: 60px;
+}
+
+nav a {
+    text-decoration: none;
+    margin-right: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    color: brown;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+nav a:hover {
+    background-color: brown;
+    color: white;
+}
+
+button{
+  padding: 2px;
+}

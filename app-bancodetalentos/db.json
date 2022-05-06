@@ -1,0 +1,46 @@
+{
+  "talentos": [
+    {
+      "nome": "Luisa",
+      "fone": "73988665522",
+      "email": "luisa@email.com",
+      "password": "123",
+      "profissao": "Desenvolvedora",
+      "cidade": "Itabuna",
+      "id": 1
+    },
+    {
+      "nome": "Pedro",
+      "fone": "5555-3215",
+      "email": "pedro@gmail.com",
+      "password": "123",
+      "profissao": "Design",
+      "cidade": "Curitiba",
+      "id": 2
+    },
+    {
+      "nome": "Joana",
+      "sobrenome": "Silva",
+      "fone": "5555-1212",
+      "email": "joana@gmail.com",
+      "password": "123456",
+      "profissao": "Design",
+      "cidade": "Curitiba",
+      "estados": "PR",
+      "imagem": "C:\\fakepath\\menina.jpg",
+      "id": 3
+    },
+    {
+      "nome": "Patricia",
+      "sobrenome": "Lemos",
+      "fone": "123-4567",
+      "email": "patricia@gmail.com",
+      "password": "123456",
+      "profissao": "Arquiteta",
+      "cidade": "Itabuna",
+      "estados": "BA",
+      "imagem": "C:\\fakepath\\menina.jpg",
+      "id": 4
+    }
+  ]
+}
