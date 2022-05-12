@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DecodeTokenService } from './decode-token.service';
 
 @Component({
   selector: 'app-root',
@@ -10,20 +11,21 @@ export class AppComponent {
 
   userLogado: any = {}
 
+    constructor(private decodeToken: DecodeTokenService) {
+      this.usuarioConectado()
+    }
+
   usuarioConectado() {
-    let user: (string | null) = localStorage.getItem("userConectado")
-    if (user != null) {
-      user = JSON.parse(user)
-      this.userLogado = user
+    let token: (string | null) = localStorage.getItem('token')
+    if (token != null) {
+      token = this.decodeToken.decodeTokenJWT()
+      //let decode = JSON.parse(token)
+      this.userLogado = token
     }
   }
 
-  constructor() {
-    this.usuarioConectado()
-  }
-
   logOut() {
-    localStorage.removeItem("userConectado")
+    localStorage.removeItem('token')
     window.location.href = 'login'
   }
 }
