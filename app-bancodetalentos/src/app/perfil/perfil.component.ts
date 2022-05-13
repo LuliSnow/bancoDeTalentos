@@ -1,6 +1,6 @@
 import { CadastroService } from './../cadastro.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private cadastroService: CadastroService) { }
+  constructor(private route: ActivatedRoute, private cadastroService: CadastroService, private router: Router) { }
   talento: any = {}
   msg: string = ''
 

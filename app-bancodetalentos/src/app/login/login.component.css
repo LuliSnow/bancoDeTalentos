@@ -1,6 +1,21 @@
+body {
+  background-image: url(../../imagens/login.svg);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 70vw;
+}
+
+
+.container {
+  margin-top: 20vh;
+  margin-left: 13vw;
+  position: absolute;
+  max-width: 40vw;
+  position: left;
+}
+
 div.ng-invalid {
   color: red;
-  background-color: white;
   font-size: smaller;
   font-style: italic;
   margin-bottom: 10px;
