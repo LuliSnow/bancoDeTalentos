@@ -1,7 +1,10 @@
 <nav>
+
   <a routerLink="home"><i class="align-middle material-icons">home</i></a>
 
   <a routerLink="consulta">Consulta</a>
+
+
 
   <a *ngIf="!userLogado.email" routerLink="login">Login</a>
 
@@ -9,8 +12,9 @@
   </span>{{userLogado.nome}}</a>
 
   <button (click)="logOut()" *ngIf="userLogado.email" class="btn btn-danger m-2">
-    Logout
+    <i class="fa-solid fa-arrow-right-from-bracket"></i>
   </button>
+
 </nav>
 
 <router-outlet></router-outlet>

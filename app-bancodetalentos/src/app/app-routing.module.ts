@@ -1,3 +1,4 @@
+import { AuthPerfilService } from './auth-perfil.service';
 import { PerfilComponent } from './perfil/perfil.component';
 import { LoginComponent } from './login/login.component';
 import { Component, NgModule } from '@angular/core';
@@ -25,7 +26,8 @@ const routes: Routes = [
   },
   {
     path: 'perfil/:idtalento',
-    component: PerfilComponent
+    component: PerfilComponent,
+    canActivate: [AuthPerfilService]
   }
 ];
 

@@ -32,6 +32,9 @@ export class PerfilComponent implements OnInit {
   }
 
   excluir(id: any) {
-    this.cadastroService.apagar(id).subscribe(x => {window.location.reload()});
+    if(this.cadastroService.apagar(id).subscribe()) {
+      localStorage.removeItem('token')
+      window.location.href = 'login'
+    }
   }
 }

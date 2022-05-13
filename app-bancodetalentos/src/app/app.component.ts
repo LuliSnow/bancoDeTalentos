@@ -11,9 +11,9 @@ export class AppComponent {
 
   userLogado: any = {}
 
-    constructor(private decodeToken: DecodeTokenService) {
-      this.usuarioConectado()
-    }
+  constructor(private decodeToken: DecodeTokenService) {
+    this.usuarioConectado()
+  }
 
   usuarioConectado() {
     let token: (string | null) = localStorage.getItem('token')
@@ -29,5 +29,3 @@ export class AppComponent {
     window.location.href = 'login'
   }
 }
-
-
