@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CadastroService } from '../cadastro.service';
-
+import { ConsultaService } from '../consulta.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -9,8 +9,11 @@ import { CadastroService } from '../cadastro.service';
 })
 export class CadastroComponent {
   msg = ''
+  areas: any
 
-  constructor(private serviceCadastro: CadastroService) { }
+  constructor(private serviceCadastro: CadastroService, private serviceConsulta: ConsultaService) {
+    this.serviceConsulta.getAll().subscribe(response => this.areas = response)
+   }
 
   createTalent(data: any) {
     //data.perfil = "TALENTO"

@@ -1,32 +1,30 @@
 body {
-  background-image: url(../../imagens/login.svg);
+  background-image: url(../../assets/imagens/login.svg);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: 70vw;
+  background-clip: padding-box;
 }
 
-
 .container {
-  margin-top: 20vh;
-  margin-left: 13vw;
+  margin-top: 9%;
+  margin-left: 14%;
   position: absolute;
   max-width: 40vw;
   position: left;
 }
 
 div.ng-invalid {
-  color: red;
+  color: white;
   font-size: smaller;
   font-style: italic;
   margin-bottom: 10px;
   font-weight: 500;
 }
 
-label {
-   margin-top: 10px;
-}
-
 h2 {
+color: white;
+  padding-bottom: 20px;
    text-align: center;
 }
 
@@ -42,6 +40,7 @@ h2 {
 }
 
 a {
+  color: white;
   margin-left: 5px;
 }
 
@@ -55,7 +54,24 @@ input {
   margin-bottom: 10px;
 }
 
+button {
+  color: white;
+  background-color: rgba(165, 42, 42, 0.87)
+}
+
+button:hover{
+  background-color: white;
+  color:rgba(165, 42, 42, 0.87);
+}
+
 .link {
   display: flex;
   justify-content: center;
+}
+
+img{
+  margin-right: 4%;
+  float: right;
+  max-width: 40%;
+  margin-top: 17%;
 }

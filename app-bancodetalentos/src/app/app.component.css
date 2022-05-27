@@ -2,12 +2,15 @@ html, body {
     height: 100%;
 }
 
-nav {
+ul {
+    width: 100%;
     background-color: rosybrown;
+    background-attachment: fixed;
     padding: 10px;
+    align-items: center;
 }
 
-nav a {
+li a {
     text-decoration: none;
     margin-right: 10px;
     background-color: white;
@@ -19,7 +22,7 @@ nav a {
     font-size: 15px;
 }
 
-nav a:hover {
+li a:hover {
     background-color: brown;
     color: white;
 }

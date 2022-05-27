@@ -1,4 +1,40 @@
-h3{
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+label {
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+legend {
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+h3 {
   text-align: center;
   color: green;
+}
+
+div {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+
+form {
+  margin-top: 20px;
+  background-color: rgb(195, 162, 162);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 30px;
+  font-size: 17px;
+}
+
+#validacao {
+  color: black;
 }

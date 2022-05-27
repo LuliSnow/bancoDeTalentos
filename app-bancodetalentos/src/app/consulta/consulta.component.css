@@ -31,6 +31,17 @@
     font-size: 21px;
 }
 
-i{
+i {
   color: crimson;
+}
+
+button {
+    border-color: #d3d3d3;
+}
+
+.search {
+    margin-left: 30px;
+    margin-right: 30px;
+    align-items: center;
+    margin-bottom: 10px;
 }

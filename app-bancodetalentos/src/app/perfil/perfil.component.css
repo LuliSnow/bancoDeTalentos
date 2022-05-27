@@ -5,6 +5,7 @@ h3 {
 
 h2{
 text-align: center;
+margin-top: 30px;
 }
 
 label{
@@ -19,4 +20,19 @@ label{
   position: absolute;
   right: 10px;
   top: 10px;
+}
+
+#editar {
+  margin-top: 20px;
+  background-color: rgb(195, 162, 162);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+div {
+  margin-top: 0;
+}
+
+input {
+  margin-bottom: 12px;
 }

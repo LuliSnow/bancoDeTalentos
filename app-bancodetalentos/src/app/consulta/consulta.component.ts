@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CadastroService } from '../cadastro.service';
+import { ConsultaService } from '../consulta.service';
 
 @Component({
   selector: 'app-consulta',
