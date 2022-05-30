@@ -9,8 +9,12 @@ import { ConsultaService } from '../consulta.service';
 })
 export class ConsultaComponent {
   talentos: any
+  // searchText: any;
+  areas: any
 
-  constructor(private serviceCadastro: CadastroService) {
+  constructor(private serviceCadastro: CadastroService, private serviceConsulta: ConsultaService) {
     this.serviceCadastro.getAll().subscribe(response => this.talentos = response)
+
+    this.serviceConsulta.getAll().subscribe(response => this.areas = response)
   }
 }

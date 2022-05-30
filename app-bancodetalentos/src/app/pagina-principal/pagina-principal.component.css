@@ -1,23 +1,25 @@
-html, body {
+/*html, body {
   height: 100%;
   margin: 0;
-}
-body {
-  display: flex;
-  flex-direction: column;
+}*/
+
+#background {
+
   background-image: url("../../assets/imagens/backgroundhome.svg");
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    background-position: center top;
-    padding-top: 0px;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-top: 0px;
 }
-img {
+
+#imagem1 {
   width: 65vw;
   margin-left: 17%;
   margin-top: 7.5%;
 }
+
+
 footer {
-    border-top: 1px solid black;
     width: 100%;
     text-align: left;
     margin-top: 10vh;
@@ -25,24 +27,19 @@ footer {
     border: none;
 }
 
-h6 {
+#faleconosco {
   margin-top: 10px;
-  margin-left: 30px;
   margin-bottom: 5px;
   color: white;
 }
 
-p {
+
+#faleconosco_p {
   color: white;
-  margin-left: 30px;
   margin-bottom: 2px;
   font-weight: 500;
 }
 
 .material-icons{
   font-size: 15px;
-}
-
-h1 {
-  margin-top: 30px;
 }

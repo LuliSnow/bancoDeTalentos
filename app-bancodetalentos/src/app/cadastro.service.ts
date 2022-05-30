@@ -10,6 +10,7 @@ export class CadastroService {
 
   create(data: any) {
     let url = 'https://app-banco-talentos.herokuapp.com/talentos';
+    //let url = 'http://localhost:8080/talento';
     return this.http.post(url, data);
   }
 

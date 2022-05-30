@@ -21,6 +21,10 @@ const routes: Routes = [
     component: PaginaPrincipalComponent
   },
   {
+    path: '',
+    component: PaginaPrincipalComponent
+  },
+  {
     path: 'login',
     component: LoginComponent
   },
