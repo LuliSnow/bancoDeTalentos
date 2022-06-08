@@ -1,6 +1,18 @@
 <div class="container-fluid mt-3">
   <form class="search d-flex">
-    <input class="form-control me-2" type="search" name="search" placeholder="Busca..." aria-label="Search">
+    <div class="col-md-4 me-2">
+      <select ng-model="selectedArea" #area="ngModel" ngModel name="areas" id="areas" class="form-select">
+        <option value="">Selecione a área</option>
+        <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-4 me-2">
+      <input class="form-control" type="text" placeholder="Busca..." aria-label="Search" name="search"
+        [(ngModel)]="filter">
+    </div>
+
     <button class="btn" type="submit">
       <i class="material-icons align-middle" style="font-size:24px">search</i>
     </button>
@@ -8,9 +20,12 @@
 </div>
 
 <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div id="card" *ngFor="let talento of talentos">
+  <div id="card" *ngFor="let talento of talentos | filter:filter; let i = index">
     <div class='border-danger card col m-3'>
       <div class='card-body'>
+        <!--AREA PROFISSIONAL-->
+        <div class="card-text">{{ talento.area[0].area }}</div>
+
         <!-- NOME -->
         <div class='card-title bg-danger text-center'>{{ talento.nome }} {{ talento.sobrenome }}</div>
 

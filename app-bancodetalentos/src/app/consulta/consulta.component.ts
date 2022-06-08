@@ -11,6 +11,7 @@ export class ConsultaComponent {
   talentos: any
   // searchText: any;
   areas: any
+  filter: any
 
   constructor(private serviceCadastro: CadastroService, private serviceConsulta: ConsultaService) {
     this.serviceCadastro.getAll().subscribe(response => this.talentos = response)

@@ -58,7 +58,7 @@
       <label class="form-label" for="area">Área Profissional:</label>
       <select #area="ngModel" ngModel class="form-select" id="areas" name="areas" required>
         <option value="" selected>-----------</option>
-        <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.id }} - {{ ar.area }}</option>
+        <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}</option>
       </select>
       <div *ngIf="profissao.invalid" class="ng-invalid invalid-feedback" id="validacao">
         Informe a área.
