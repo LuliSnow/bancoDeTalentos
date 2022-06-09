@@ -2,7 +2,7 @@
   <form class="search d-flex">
     <div class="col-md-4 me-2">
       <select ng-model="selectedArea" #area="ngModel" ngModel name="areas" id="areas" class="form-select">
-        <option value="">Selecione a área</option>
+        <option value="">Veja as áreas disponíveis - escolha uma e pesquise ao lado</option>
         <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}
         </option>
       </select>
@@ -24,7 +24,7 @@
     <div class='border-danger card col m-3'>
       <div class='card-body'>
         <!--AREA PROFISSIONAL-->
-        <div class="card-text">{{ talento.area[0].area }}</div>
+        <div class="card-header text-center">{{ talento.area }}</div>
 
         <!-- NOME -->
         <div class='card-title bg-danger text-center'>{{ talento.nome }} {{ talento.sobrenome }}</div>

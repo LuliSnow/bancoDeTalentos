@@ -37,8 +37,9 @@
 
     <div class="col-md-6">
       <label class="form-label" for="area">Área Profissional:</label>
-      <select #area="ngModel" ngModel class="form-select" id="area" name="area" required>
+      <select #area="ngModel" ngModel class="form-select" id="areas" name="areas" required>
         <option value="" selected>-----------</option>
+        <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}</option>
       </select>
     </div>
 

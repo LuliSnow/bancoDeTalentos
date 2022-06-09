@@ -1,6 +1,7 @@
 import { CadastroService } from './../cadastro.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ConsultaService } from '../consulta.service';
 
 @Component({
   selector: 'app-perfil',
@@ -9,9 +10,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class PerfilComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private cadastroService: CadastroService, private router: Router) { }
+  constructor(private route: ActivatedRoute, private cadastroService: CadastroService, private router: Router,  private serviceConsulta: ConsultaService) {
+    this.serviceConsulta.getAll().subscribe(response => this.areas = response);
+   }
+
   talento: any = {}
   msg: string = ''
+  areas: any
 
   ngOnInit(): void {
     let routeParams = this.route.snapshot.paramMap;

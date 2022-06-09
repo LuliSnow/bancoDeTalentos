@@ -16,7 +16,7 @@ export class CadastroService {
 
   getAll() {
     //let url = 'https://app-banco-talentos.herokuapp.com/talentos';
-    let url = 'http://localhost:8080/talento'
+    let url = 'http://localhost:8080/talentos'
     return this.http.get(url);
   }
 
