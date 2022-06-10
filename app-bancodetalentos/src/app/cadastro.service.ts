@@ -9,8 +9,8 @@ export class CadastroService {
   constructor(private http: HttpClient) { }
 
   create(data: any) {
-    let url = 'https://app-banco-talentos.herokuapp.com/talentos';
-    //let url = 'http://localhost:8080/talento';
+    //let url = 'https://app-banco-talentos.herokuapp.com/talentos';
+    let url = 'http://localhost:8080/talentos';
     return this.http.post(url, data);
   }
 
@@ -21,15 +21,18 @@ export class CadastroService {
   }
 
   getOne(idtalento: number) {
-    return this.http.get(`https://app-banco-talentos.herokuapp.com/talentos/${idtalento}`)
+    //return this.http.get(`https://app-banco-talentos.herokuapp.com/talentos/${idtalento}`)
+    return this.http.get(`http://localhost:8080/talentos/${idtalento}`);
   }
 
   alterar(dados: any) {
-    let url = `https://app-banco-talentos.herokuapp.com/talentos/${dados.id}`
+    //let url = `https://app-banco-talentos.herokuapp.com/talentos/${dados.id}`
+    let url = 'http://localhost:8080/talentos'
     return this.http.put(url, dados)
   }
 
   apagar(idtalento: number) {
-    return this.http.delete(`https://app-banco-talentos.herokuapp.com/talentos/${idtalento}`)
+    //eturn this.http.delete(`https://app-banco-talentos.herokuapp.com/talentos/${idtalento}`)
+    return this.http.delete(`http://localhost:8080/talentos/${idtalento}`)
   }
 }

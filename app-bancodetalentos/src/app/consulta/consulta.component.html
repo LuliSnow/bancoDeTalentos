@@ -1,14 +1,10 @@
 <div class="container-fluid mt-3">
-  <form class="search d-flex">
-    <div class="col-md-4 me-2">
-      <select ng-model="selectedArea" #area="ngModel" ngModel name="areas" id="areas" class="form-select">
-        <option value="">Veja as áreas disponíveis - escolha uma e pesquise ao lado</option>
-        <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}
-        </option>
-      </select>
-    </div>
-
-    <div class="col-md-4 me-2">
+  <div class="text-center mb-3">
+    <h5>Faça aqui a sua busca! Você pode pesquisar por área, estado, cidade, profissão ou até mesmo pelo nome do
+      talento!</h5>
+  </div>
+  <form class="search d-flex justify-content-center">
+    <div class="col-md-7 me-2">
       <input class="form-control" type="text" placeholder="Busca..." aria-label="Search" name="search"
         [(ngModel)]="filter">
     </div>
