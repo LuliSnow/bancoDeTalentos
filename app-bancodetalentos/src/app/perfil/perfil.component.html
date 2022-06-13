@@ -2,11 +2,10 @@
   <div class="container">
     <h2>Editar perfil</h2>
     <div class="row g-3" id="editar">
-
-      <div class="col-md-1">
+      <!-- <div class="col-md-2">
         <label class="form-label">Id</label>
         <input class="form-control" type="number" [(ngModel)]="talento.id" disabled>
-      </div>
+      </div> -->
 
       <div class="col-md-4">
         <label class="form-label">Nome</label>
@@ -18,7 +17,7 @@
         <input class="form-control" type="text" [(ngModel)]="talento.sobrenome">
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-4">
         <label class="form-label">Fone</label>
         <input class="form-control" type="text" [(ngModel)]="talento.fone">
       </div>
@@ -38,8 +37,9 @@
 
       <div class="col-md-6">
         <label class="form-label" for="area">Área Profissional:</label>
-        <select #area="ngModel" ngModel class="form-select" id="areas" name="areas" required>
-          <option *ngFor="let ar of areas" [value]="ar.id" [selected]="ar.id == talento.area_id">{{ ar.area }}</option>
+        <select #area="ngModel" ngModel class="form-select" id="areas" name="areas" required
+          [(ngModel)]="talento.area_id">
+          <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}</option>
         </select>
       </div>
 

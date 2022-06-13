@@ -10,33 +10,33 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 const routes: Routes = [
   {
     path: 'cadastro',
-    component: CadastroComponent
+    component: CadastroComponent,
   },
   {
     path: 'consulta',
-    component: ConsultaComponent
+    component: ConsultaComponent,
   },
   {
     path: 'home',
-    component: PaginaPrincipalComponent
+    component: PaginaPrincipalComponent,
   },
   {
     path: '',
-    component: PaginaPrincipalComponent
+    component: PaginaPrincipalComponent,
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'perfil/:idtalento',
     component: PerfilComponent,
-    canActivate: [AuthPerfilService]
-  }
+    canActivate: [AuthPerfilService],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
