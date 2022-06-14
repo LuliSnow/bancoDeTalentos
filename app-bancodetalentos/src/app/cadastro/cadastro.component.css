@@ -13,9 +13,14 @@ legend {
   font-size: 1.35rem;
 }
 
-h3 {
+h4 {
   text-align: center;
   color: green;
+}
+
+h3 {
+  text-align: center;
+  color: red;
 }
 
 div {

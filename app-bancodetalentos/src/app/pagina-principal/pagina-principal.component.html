@@ -17,7 +17,7 @@
     <h5>
       Confira quem são os integrantes da nossa comunidade e encontre aquela pessoa talentosa que você procura!
     </h5>
-    <a href="http://localhost:4200/consulta"><button class="btn btn-danger mt-4 mb-5">Confira os talentos</button></a>
+    <a routerLink="/consulta"><button class="btn btn-danger mt-4 mb-5">Confira os talentos</button></a>
   </div>
   <div class="row justify-content-center">
     <div class="col-4">
@@ -27,7 +27,7 @@
       <p>Se você possui um talento capaz de turbinar o negócio de alguém, cadastre-se! Várias pessoas estão precisando
         das
         suas habilidades!</p>
-      <a href="http://localhost:4200/cadastro"><button class="btn btn-danger align-middle">Cadastre-se</button></a>
+      <a routerLink="/cadastro"><button class="btn btn-danger align-middle">Cadastre-se</button></a>
     </div>
 
     <div class="row justify-content-center mt-5">
@@ -67,3 +67,5 @@
         </div>
       </footer>
     </div>
+
+    <router-outlet></router-outlet>

@@ -1,51 +1,77 @@
 import { Component } from '@angular/core';
 import { CadastroService } from '../cadastro.service';
 import { ConsultaService } from '../consulta.service';
+//import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  styleUrls: ['./cadastro.component.css'],
 })
 export class CadastroComponent {
-  msg = ''
-  areas: any
+  msg = '';
+  areas: any;
+  talento: any;
+  msgerr = '';
 
-  /*obj =
-    {
-      nome: String,
-      sobrenome: String,
-      fone: String,
-      email: String,
-      password: String,
-      profissao: String,
-      cidade: String,
-      estado: String,
-      perfil: String,
-      area: [{
-        id: Number,
-        area: String
-      }]
-    }*/
+  constructor(
+    //private route: ActivatedRoute,
+    private serviceCadastro: CadastroService,
+    private serviceConsulta: ConsultaService
+  ) {
+    this.serviceConsulta
+      .getAll()
+      .subscribe((response) => (this.areas = response));
+  }
 
-  constructor(private serviceCadastro: CadastroService, private serviceConsulta: ConsultaService) {
-    this.serviceConsulta.getAll().subscribe(response => this.areas = response)
-   }
+  //ngOnInit(): void {
+  //  this.emails = this.route.snapshot.paramMap.get('email');
+  //}
+
+  getEmail(email: string) {
+    this.serviceCadastro.getEmail(email).subscribe((response) => {
+      console.log(response), (this.talento = response);
+    });
+  }
 
   createTalent(data: any) {
-    //data.perfil = "TALENTO"
-    /*this.obj.nome = data.nome;
-    this.obj.sobrenome = data.sobrenome;
-    this.obj.fone = data.fone;
-    this.obj.email = data.email;
-    this.obj.password = data.password;
-    this.obj.profissao = data.profissao;
-    this.obj.cidade = data.cidade;
-    this.obj.estado = data.estado;
-    this.obj.perfil = data.perfil;
-    this.obj.area[0].id = data.area.id;
-    this.obj.area[0].area = data.area.area;*/
-    this.serviceCadastro.create(data).subscribe(response => setInterval(() => {window.location.href = 'login'}, 1000));
-    this.msg = 'Talento cadastrado com sucesso!';
+    this.serviceCadastro.getEmail(data.email).subscribe((response) => {
+      this.talento = JSON.stringify(response);
+      let dados = JSON.parse(this.talento);
+      if (dados.email == data.email) {
+        return (this.msgerr = 'Email já cadastrado!');
+      }
+      if (dados.email != data.email || data.email == null) {
+        this.serviceCadastro.create(data).subscribe((response) => {
+          console.log(response);
+          setInterval(() => {
+            window.location.href = 'login';
+          }, 1000);
+        });
+      }
+      return (this.msg = 'Talento cadastrado com sucesso!');
+    });
+    console.log(this.talento);
+    /*if (this.getEmail(data.email) == data.email) {
+      this.msgerr = 'Email já cadastrado!';
+    } else {
+      this.serviceCadastro.create(data).subscribe((response) => {
+        console.log(response);
+        setInterval(() => {
+          window.location.href = 'login';
+        }, 1000);
+        this.msg = 'Talento cadastrado com sucesso!';
+      });
+    }*/
   }
+
+  /*createTalent(data: any) {
+    this.serviceCadastro.create(data).subscribe((response) => {
+      console.log(response);
+      setInterval(() => {
+        window.location.href = 'login';
+      }, 1000);
+    });
+    this.msg = 'Talento cadastrado com sucesso!';
+  }*/
 }
