@@ -1,10 +1,12 @@
-#background {
+body {
+  height: 100%;
+  margin: 0;
   background-image: url(../../assets/imagens/background2.svg);
-  background-attachment: inherit;
+  background-attachment: fixed;
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: center top;
-
+  padding-top: 0px;
 }
 
 h3 {
@@ -12,16 +14,23 @@ h3 {
   color: green;
 }
 
-h2{
-text-align: center;
-/* margin-top: 30px; */
+h2 {
+  text-shadow: white 3px -3px, white -3px 3px, white 3px 3px, white -3px -3px;
 }
 
-label{
+#formulario {
+  position: absolute;
+  size: 100vw;
+  margin: 0;
+
+}
+
+label {
   font-weight: 600;
 }
 
-.eyeicon {  position: relative;
+.eyeicon {
+  position: relative;
   cursor: pointer;
 }
 
@@ -36,6 +45,7 @@ label{
   background-color: rgb(195, 162, 162);
   border-radius: 20px;
   padding: 20px;
+  size: 100vw;
 }
 
 div {

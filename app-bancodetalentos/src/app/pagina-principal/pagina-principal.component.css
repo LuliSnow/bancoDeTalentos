@@ -1,15 +1,18 @@
-/*html, body {
-  height: 100%;
-  margin: 0;
-}*/
-
 #background {
-
   background-image: url("../../assets/imagens/backgroundhome.svg");
   background-size: 100vw;
   background-repeat: no-repeat;
   background-position: center top;
   padding-top: 0px;
+}
+
+#essaAqui {
+  padding: 0;
+}
+
+#imagensCorpo {
+  margin: 0;
+  width: auto;
 }
 
 #imagem1 {
@@ -18,12 +21,11 @@
   margin-top: 7.5%;
 }
 
-
 footer {
-    text-align: left;
-    margin-top: 10vh;
-    background-color: rosybrown;
-    border: none;
+  text-align: left;
+  margin-top: 10vh;
+  background-color: rosybrown;
+  border: none;
 }
 
 #faleconosco {
@@ -37,6 +39,6 @@ footer {
   font-weight: 500;
 }
 
-.material-icons{
+.material-icons {
   font-size: 15px;
 }

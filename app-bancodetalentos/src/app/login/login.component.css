@@ -22,21 +22,26 @@ div.ng-invalid {
   font-weight: 500;
 }
 
+.mensagem {
+  font-weight: 500;
+  color: red;
+}
+
 h2 {
-color: white;
+  color: white;
   padding-bottom: 20px;
-   text-align: center;
+  text-align: center;
 }
 
-.eyeicon{
-   position: relative;
-   cursor: pointer;
+.eyeicon {
+  position: relative;
+  cursor: pointer;
 }
 
-.eyeicon i{
-   position: absolute;
-   right: 10px;
-   top: 10px;
+.eyeicon i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 a {
@@ -59,9 +64,9 @@ button {
   background-color: rgba(165, 42, 42, 0.87)
 }
 
-button:hover{
+button:hover {
   background-color: white;
-  color:rgba(165, 42, 42, 0.87);
+  color: rgba(165, 42, 42, 0.87);
 }
 
 .link {
@@ -69,7 +74,7 @@ button:hover{
   justify-content: center;
 }
 
-img{
+img {
   margin-right: 4%;
   float: right;
   max-width: 40%;

@@ -8,20 +8,14 @@ export class CadastroService {
   constructor(private http: HttpClient) {}
 
   create(data: any) {
-    //let url = 'https://app-banco-talentos.herokuapp.com/talentos';
-    let url = 'http://localhost:8080/talentos';
+    let url = 'https://app-banco-talentos.herokuapp.com/talentos';
+    //let url = 'http://localhost:8080/talentos';
     return this.http.post(url, data);
   }
 
   getAll() {
     let url = 'https://app-banco-talentos.herokuapp.com/talentos';
     //let url = 'http://localhost:8080/talentos'
-    return this.http.get(url);
-  }
-
-  getEmail(email: string) {
-    //let url = 'https://app-banco-talentos.herokuapp.com/talentos/email';
-    let url = `http://localhost:8080/talentos/search/${email}`;
     return this.http.get(url);
   }
 

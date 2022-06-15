@@ -8,25 +8,21 @@ import { AuthenticationService } from '../authentication.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private auth: AuthenticationService, private serviceCadastro: CadastroService) { }
-
-  usuarios: any = {}
+  constructor(
+    private auth: AuthenticationService,
+    private serviceCadastro: CadastroService
+  ) {}
+  msg: any;
 
   fazerLogin(form: any) {
-    if(this.getUser()) {
-      this.auth.login(form.email, form.password).subscribe((token) => {
-        this.usuarios = token;
-        localStorage.setItem('token', JSON.stringify(this.usuarios));
+    this.auth.login(form.email, form.password).subscribe(
+      (response) => {
+        let data = JSON.stringify(response);
+        localStorage.setItem('token', data);
         window.location.href = 'home';
-      });
-    }
-  }
-
-  getUser() {
-    this.serviceCadastro.getAll().subscribe((user) => {
-      this.usuarios = user;
-    });
-    return this.usuarios;
+      },
+      (error) => (this.msg = 'Email ou senha incorretos!')
+    );
   }
 
   //-------- Função olho --------

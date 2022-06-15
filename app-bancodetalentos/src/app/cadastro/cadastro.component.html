@@ -1,145 +1,149 @@
-<div class="container">
-  <h2 class="fs-3 fst-italic text-center mb-3">Preencha o formulário abaixo para se cadastrar no banco de
-    talentos
-  </h2>
-  <form class="was-validated row g-3" novalidate #f="ngForm" (ngSubmit)="createTalent(f.value)">
-    <div class="col-md-4">
-      <!--NOME-->
-      <label class="form-label" for="nome">Nome:</label>
-      <input #nome="ngModel" ngModel type="text" placeholder="Ex.: Maria" name="nome" id="nome" class="form-control"
-        minlength="3" required>
-      <div *ngIf="nome.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Informe o seu nome.
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <!--SOBRENOME-->
-      <label class="form-label" for="sobrenome">Sobrenome:</label>
-      <input #sobrenome="ngModel" ngModel type="text" placeholder="Ex.: Santos" name="sobrenome" id="sobrenome"
-        class="form-control" required minlength="3">
-      <div *ngIf="sobrenome.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Informe o seu sobrenome.
-      </div>
-    </div>
-
-    <div class="col-md-4">
-      <!--FONE-->
-      <label class="form-label" for="fone">Fone:</label>
-      <input #fone="ngModel" ngModel type="text" placeholder="Ex.: 11988123456" name="fone" id="fone"
-        class="form-control" required>
-      <div *ngIf="fone.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Informe o seu telefone.
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <!--EMAIL-->
-      <label class="form-label" for="email">Email:</label>
-      <input #email="ngModel" ngModel type="email" placeholder="Ex.: maria@gmail.com" name="email" id="email"
-        class="form-control" required>
-      <div *ngIf="email.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Informe o seu email.
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <!--SENHA-->
-      <label class="form-label" for="password">Senha:</label>
-      <input #password="ngModel" ngModel type="password" placeholder="Mínimo 6 caracteres" name="password" id="password"
-        class="form-control" minlength="6" required>
-      <div *ngIf="password.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Informe a senha.
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <!--ÁREA PROFISSIONAL-->
-      <label class="form-label" for="area">Área Profissional:</label>
-      <select #area="ngModel" ngModel class="form-select" id="areas" name="areas" required>
-        <option value="" selected>-----------</option>
-        <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}</option>
-      </select>
-      <div *ngIf="profissao.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Informe a área.
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <!--PROFISSÃO-->
-      <label class="form-label" for="profissao">Profissão:</label>
-      <input #profissao="ngModel" ngModel type="text" placeholder="Ex.: Designer" name="profissao" id="profissao"
-        class="form-control" required>
-      <div *ngIf="profissao.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Informe a sua profissão.
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <!--CIDADE-->
-      <label class="form-label" for="cidade">Cidade:</label>
-      <input #cidade="ngModel" ngModel type="text" placeholder="Ex.: Campo Grande" name="cidade" id="cidade"
-        class="form-control" required>
-      <div *ngIf="cidade.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Informe a sua cidade.
-      </div>
-    </div>
-
-    <div class="col-md-6">
-      <!--ESTADO-->
-      <label class="form-label" for="estado">Estado:</label>
-      <select #estado="ngModel" ngModel class="form-select" id="estado" name="estado" required>
-        <option value="" selected>-----------</option>
-        <option value="AC">Acre - AC</option>
-        <option value="AL">Alagoas - AL</option>
-        <option value="AP">Amapá - AP</option>
-        <option value="AM">Amazonas - AM</option>
-        <option value="BA">Bahia - BA</option>
-        <option value="CE">Ceará - CE</option>
-        <option value="DF">Distrito Federal - DF</option>
-        <option value="ES">Espírito Santo - ES</option>
-        <option value="GO">Goiás - GO</option>
-        <option value="MA">Maranhão - MA</option>
-        <option value="MT">Mato Grosso - MT</option>
-        <option value="MS">Mato Grosso do Sul - MS</option>
-        <option value="MG">Minas Gerais - MG</option>
-        <option value="PA">Pará - PA</option>
-        <option value="PB">Paraíba - PB</option>
-        <option value="PR">Paraná - PR</option>
-        <option value="PE">Pernambuco - PE</option>
-        <option value="PI">Piauí - PI</option>
-        <option value="RJ">Rio de Janeiro - RJ</option>
-        <option value="RN">Rio Grande do Norte - RN</option>
-        <option value="RS">Rio Grande do Sul - RS</option>
-        <option value="RO">Rondônia - RO</option>
-        <option value="RR">Roraima - RR</option>
-        <option value="SC">Santa Catarina - SC</option>
-        <option value="SP">São Paulo - SP</option>
-        <option value="SE">Sergipe - SE</option>
-        <option value="TO">Tocantins - TO</option>
-      </select>
-      <div *ngIf="estado.invalid" class="ng-invalid invalid-feedback" id="validacao">
-        Selecione o seu estado.
-      </div>
-    </div>
-
-
-    <!--IMAGEM-->
-    <div class="col-md-4">
-      <fieldset>
-        <legend>Foto:</legend>
-        <input #imagem="ngModel" ngModel name="imagem" type="file" id="imagem" placeholder="Envie uma foto sua"
-          class="form-control" required />
-        <div *ngIf="imagem.invalid" class="ng-invalid invalid-feedback" id="validacao">
-          Anexe uma foto sua.
+<body>
+  <div class="row justify-content-center mt-5" id="formulario">
+    <h2 class="fs-3 fst-italic text-center mb-3">Preencha o formulário abaixo para se cadastrar no banco de
+      talentos
+    </h2>
+    <div class="row col col-lg-11">
+      <form class="was-validated row g-3" novalidate #f="ngForm" (ngSubmit)="createTalent(f.value)">
+        <div class="col-md-4">
+          <!--NOME-->
+          <label class="form-label" for="nome">Nome:</label>
+          <input #nome="ngModel" ngModel type="text" placeholder="Ex.: Maria" name="nome" id="nome" class="form-control"
+            minlength="3" required>
+          <div *ngIf="nome.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Informe o seu nome.
+          </div>
         </div>
-      </fieldset>
-    </div>
 
-    <h4>{{ msg }}</h4>
-    <h3>{{ msgerr }}</h3>
-    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-      <button [disabled]="f.invalid" type="submit" class="btn btn-success">Salvar</button>
+        <div class="col-md-4">
+          <!--SOBRENOME-->
+          <label class="form-label" for="sobrenome">Sobrenome:</label>
+          <input #sobrenome="ngModel" ngModel type="text" placeholder="Ex.: Santos" name="sobrenome" id="sobrenome"
+            class="form-control" required minlength="3">
+          <div *ngIf="sobrenome.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Informe o seu sobrenome.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <!--FONE-->
+          <label class="form-label" for="fone">Fone:</label>
+          <input #fone="ngModel" ngModel type="text" placeholder="Ex.: 11988123456" name="fone" id="fone"
+            class="form-control" required>
+          <div *ngIf="fone.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Informe o seu telefone.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!--EMAIL-->
+          <label class="form-label" for="email">Email:</label>
+          <input #email="ngModel" ngModel type="email" placeholder="Ex.: maria@gmail.com" name="email" id="email"
+            class="form-control" required>
+          <div *ngIf="email.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Informe o seu email.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!--SENHA-->
+          <label class="form-label" for="password">Senha:</label>
+          <input #password="ngModel" ngModel type="password" placeholder="Mínimo 6 caracteres" name="password"
+            id="password" class="form-control" minlength="6" required>
+          <div *ngIf="password.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Informe a senha.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!--ÁREA PROFISSIONAL-->
+          <label class="form-label" for="area">Área Profissional:</label>
+          <select #area="ngModel" ngModel class="form-select" id="areas" name="areas" required>
+            <option value="" selected>-----------</option>
+            <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}</option>
+          </select>
+          <div *ngIf="profissao.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Informe a área.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!--PROFISSÃO-->
+          <label class="form-label" for="profissao">Profissão:</label>
+          <input #profissao="ngModel" ngModel type="text" placeholder="Ex.: Designer" name="profissao" id="profissao"
+            class="form-control" required>
+          <div *ngIf="profissao.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Informe a sua profissão.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!--CIDADE-->
+          <label class="form-label" for="cidade">Cidade:</label>
+          <input #cidade="ngModel" ngModel type="text" placeholder="Ex.: Campo Grande" name="cidade" id="cidade"
+            class="form-control" required>
+          <div *ngIf="cidade.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Informe a sua cidade.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <!--ESTADO-->
+          <label class="form-label" for="estado">Estado:</label>
+          <select #estado="ngModel" ngModel class="form-select" id="estado" name="estado" required>
+            <option value="" selected>-----------</option>
+            <option value="AC">Acre - AC</option>
+            <option value="AL">Alagoas - AL</option>
+            <option value="AP">Amapá - AP</option>
+            <option value="AM">Amazonas - AM</option>
+            <option value="BA">Bahia - BA</option>
+            <option value="CE">Ceará - CE</option>
+            <option value="DF">Distrito Federal - DF</option>
+            <option value="ES">Espírito Santo - ES</option>
+            <option value="GO">Goiás - GO</option>
+            <option value="MA">Maranhão - MA</option>
+            <option value="MT">Mato Grosso - MT</option>
+            <option value="MS">Mato Grosso do Sul - MS</option>
+            <option value="MG">Minas Gerais - MG</option>
+            <option value="PA">Pará - PA</option>
+            <option value="PB">Paraíba - PB</option>
+            <option value="PR">Paraná - PR</option>
+            <option value="PE">Pernambuco - PE</option>
+            <option value="PI">Piauí - PI</option>
+            <option value="RJ">Rio de Janeiro - RJ</option>
+            <option value="RN">Rio Grande do Norte - RN</option>
+            <option value="RS">Rio Grande do Sul - RS</option>
+            <option value="RO">Rondônia - RO</option>
+            <option value="RR">Roraima - RR</option>
+            <option value="SC">Santa Catarina - SC</option>
+            <option value="SP">São Paulo - SP</option>
+            <option value="SE">Sergipe - SE</option>
+            <option value="TO">Tocantins - TO</option>
+          </select>
+          <div *ngIf="estado.invalid" class="ng-invalid invalid-feedback" id="validacao">
+            Selecione o seu estado.
+          </div>
+        </div>
+
+
+        <!--IMAGEM-->
+        <div class="col-md-4">
+          <fieldset>
+            <legend>Foto:</legend>
+            <input #imagem="ngModel" ngModel name="imagem" type="file" id="imagem" placeholder="Envie uma foto sua"
+              class="form-control" required />
+            <div *ngIf="imagem.invalid" class="ng-invalid invalid-feedback" id="validacao">
+              Anexe uma foto sua.
+            </div>
+          </fieldset>
+        </div>
+
+        <h4>{{ msg }}</h4>
+        <h3>{{ msgerr }}</h3>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+          <button [disabled]="f.invalid" type="submit" class="btn btn-success">Salvar</button>
+        </div>
+      </form>
     </div>
-  </form>
-</div>
+  </div>
+</body>

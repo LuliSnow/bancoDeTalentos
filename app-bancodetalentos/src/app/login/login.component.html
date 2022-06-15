@@ -13,6 +13,7 @@
        </div>
 
        <div *ngIf="fpassword.invalid" class="ng-invalid">Informe sua senha</div>
+       <span class="mensagem">{{ msg }}</span>
 
        <div class="botao">
          <button [disabled]="f.invalid" class="btn mt-2">Entrar</button>
