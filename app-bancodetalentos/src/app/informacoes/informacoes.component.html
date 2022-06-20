@@ -1,0 +1,90 @@
+<body>
+  <div class="row justify-content-center mt-5" id="formulario">
+
+    <h2 class="text-center">Informações do Talento</h2>
+
+    <div class="row col col-lg-9 " id="editar">
+
+      <div class="row col-12 d-flex align-items-center">
+        <div class="row col-md-3 mb-2">
+          <img class="imagem" src="../../assets/imagens/menina.jpg">
+        </div>
+
+        <div class="text-start row col ms-2">
+          <h4 class="mb-5">Status: Disponível</h4>
+          <div class=" col col-sm-6">
+            <label class="form-label">Nome</label>
+            <input class="form-control" type="text" [(ngModel)]="talento.nome" disabled>
+          </div>
+
+          <div class="col col-sm-6">
+            <label class="form-label">Sobrenome</label>
+            <input class="form-control" type="text" [(ngModel)]="talento.sobrenome" disabled>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input class="form-control" type="text" [(ngModel)]="talento.email" disabled>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Fone</label>
+        <input class="form-control" type="text" [(ngModel)]="talento.fone" disabled>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label" for="area">Área Profissional:</label>
+        <select #area="ngModel" ngModel class="form-select" id="areas" name="areas" required
+          [(ngModel)]="talento.area_id" disabled>
+          <option *ngFor="let ar of areas" [value]="ar.id">{{ ar.area }}</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Profissão</label>
+        <input disabled class="form-control" type="text" [(ngModel)]="talento.profissao">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Cidade</label>
+        <input disabled class="form-control" type="text" [(ngModel)]="talento.cidade">
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Estado</label>
+        <select disabled [(ngModel)]="talento.estado" class="form-select" id="estado" name="estado">
+          <option value="" selected>Selecione o seu estado:</option>
+          <option value="AC">Acre - AC</option>
+          <option value="AL">Alagoas - AL</option>
+          <option value="AP">Amapá - AP</option>
+          <option value="AM">Amazonas - AM</option>
+          <option value="BA">Bahia - BA</option>
+          <option value="CE">Ceará - CE</option>
+          <option value="DF">Distrito Federal - DF</option>
+          <option value="ES">Espírito Santo - ES</option>
+          <option value="GO">Goiás - GO</option>
+          <option value="MA">Maranhão - MA</option>
+          <option value="MT">Mato Grosso - MT</option>
+          <option value="MS">Mato Grosso do Sul - MS</option>
+          <option value="MG">Minas Gerais - MG</option>
+          <option value="PA">Pará - PA</option>
+          <option value="PB">Paraíba - PB</option>
+          <option value="PR">Paraná - PR</option>
+          <option value="PE">Pernambuco - PE</option>
+          <option value="PI">Piauí - PI</option>
+          <option value="RJ">Rio de Janeiro - RJ</option>
+          <option value="RN">Rio Grande do Norte - RN</option>
+          <option value="RS">Rio Grande do Sul - RS</option>
+          <option value="RO">Rondônia - RO</option>
+          <option value="RR">Roraima - RR</option>
+          <option value="SC">Santa Catarina - SC</option>
+          <option value="SP">São Paulo - SP</option>
+          <option value="SE">Sergipe - SE</option>
+          <option value="TO">Tocantins - TO</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</body>

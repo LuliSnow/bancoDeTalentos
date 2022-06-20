@@ -1,3 +1,4 @@
+import { InformacoesComponent } from './informacoes/informacoes.component';
 import { AuthPerfilService } from './auth-perfil.service';
 import { PerfilComponent } from './perfil/perfil.component';
 import { LoginComponent } from './login/login.component';
@@ -32,6 +33,10 @@ const routes: Routes = [
     path: 'perfil/:idtalento',
     component: PerfilComponent,
     canActivate: [AuthPerfilService],
+  },
+  {
+    path: 'informacoes/:idtalento',
+    component: InformacoesComponent,
   },
 ];
 

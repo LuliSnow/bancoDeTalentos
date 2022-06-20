@@ -11,6 +11,7 @@ import { ConsultaComponent } from './consulta/consulta.component';
 import { LoginComponent } from './login/login.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { Ng2SearchPipeModule } from "ng2-search-filter";
+import { InformacoesComponent } from './informacoes/informacoes.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Ng2SearchPipeModule } from "ng2-search-filter";
     CadastroComponent,
     ConsultaComponent,
     LoginComponent,
-    PerfilComponent
+    PerfilComponent,
+    InformacoesComponent
    ],
   imports: [
     BrowserModule,

@@ -1,0 +1,62 @@
+body {
+  height: 100%;
+  margin: 0;
+  background-image: url(../../assets/imagens/background2.svg);
+  background-attachment: fixed;
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding-top: 0px;
+}
+
+h3 {
+  text-align: center;
+  color: green;
+}
+
+#formulario {
+  position: absolute;
+  size: 100vw;
+  margin: 0;
+
+}
+
+h2 {
+  text-shadow: white 3px -3px, white -3px 3px, white 3px 3px, white -3px -3px;
+}
+
+.imagem {
+  border-radius: 15px;
+  padding: 0;
+}
+
+label {
+  font-weight: 600;
+}
+
+.eyeicon {
+  position: relative;
+  cursor: pointer;
+}
+
+.eyeicon i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+#editar {
+  margin-top: 20px;
+  background-color: rgb(195, 162, 162);
+  border-radius: 20px;
+  padding: 20px;
+  size: 100vw;
+}
+
+div {
+  margin-top: 0;
+}
+
+input {
+  margin-bottom: 12px;
+}
