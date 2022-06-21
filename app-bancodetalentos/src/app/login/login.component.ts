@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CadastroService } from '../cadastro.service';
 import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ import { AuthenticationService } from '../authentication.service';
 export class LoginComponent {
   constructor(
     private auth: AuthenticationService,
-    private serviceCadastro: CadastroService
+    private serviceCadastro: CadastroService,
+    private router: Router
   ) {}
   msg: any;
 
@@ -19,7 +21,8 @@ export class LoginComponent {
       (response) => {
         let data = JSON.stringify(response);
         localStorage.setItem('token', data);
-        window.location.href = '';
+        //window.location.href = '';
+        this.router.navigate(['/login']);
       },
       (error) => (this.msg = 'Email ou senha incorretos!')
     );

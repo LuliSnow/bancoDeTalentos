@@ -54,10 +54,24 @@ export class PerfilComponent implements OnInit {
     });
   }
 
-  excluir(id: any) {
+  /*excluir(id: any) {
     if (this.cadastroService.apagar(id).subscribe()) {
       localStorage.removeItem('token');
     }
     window.location.href = '';
+  }*/
+
+  excluir(id: number) {
+    this.cadastroService.apagar(id).subscribe(
+      (x) => {
+        //localStorage.removeItem('token');
+        this.router.navigate(['/login']);
+        //window.location.reload();
+      },
+      (error) => {
+        localStorage.removeItem('token');
+        //this.router.navigate(['/login']);
+      }
+    );
   }
 }
