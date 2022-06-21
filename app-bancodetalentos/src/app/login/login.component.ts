@@ -22,7 +22,7 @@ export class LoginComponent {
         let data = JSON.stringify(response);
         localStorage.setItem('token', data);
         //window.location.href = '';
-        this.router.navigate(['/login']);
+        this.router.navigate(['/home']);
       },
       (error) => (this.msg = 'Email ou senha incorretos!')
     );

@@ -65,8 +65,8 @@ export class PerfilComponent implements OnInit {
     this.cadastroService.apagar(id).subscribe(
       (x) => {
         //localStorage.removeItem('token');
-        this.router.navigate(['/login']);
-        //window.location.reload();
+        //this.router.navigate(['/login']);
+        window.location.reload();
       },
       (error) => {
         localStorage.removeItem('token');

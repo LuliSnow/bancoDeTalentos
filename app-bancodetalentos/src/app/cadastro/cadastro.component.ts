@@ -30,7 +30,7 @@ export class CadastroComponent {
         return (this.msgerr = 'Email já cadastrado!');
       } else {
         setInterval(() => {
-          window.location.href = '';
+          window.location.href = 'login';
         }, 1000);
       }
       this.msgerr = '';

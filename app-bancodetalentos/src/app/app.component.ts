@@ -26,6 +26,6 @@ export class AppComponent {
 
   logOut() {
     localStorage.removeItem('token');
-    window.location.href = '';
+    window.location.href = 'home';
   }
 }
