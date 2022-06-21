@@ -19,7 +19,7 @@ export class LoginComponent {
       (response) => {
         let data = JSON.stringify(response);
         localStorage.setItem('token', data);
-        window.location.href = 'home';
+        window.location.href = '';
       },
       (error) => (this.msg = 'Email ou senha incorretos!')
     );
