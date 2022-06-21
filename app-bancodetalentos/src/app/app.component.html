@@ -2,12 +2,15 @@
   <li class="nav-item">
     <a routerLink="home"><i class="align-middle material-icons">home</i></a>
   </li>
+
   <li class="nav-item">
     <a class="nav-link" routerLink="consulta">Talentos</a>
   </li>
+
   <li class="nav-item">
     <a class="nav-link" aria-current="page" href="#" *ngIf="!userLogado.email" routerLink="login">Login</a>
   </li>
+
   <li class="nav-item">
     <a href="#" *ngIf="userLogado.email" class="nav-link form-label py-1 px-2 position-relative"
       [routerLink]="['/perfil/', userLogado.id]"><span
@@ -15,6 +18,7 @@
           class="visually-hidden nav-link">unread messages</span>
       </span>{{userLogado.nome}}</a>
   </li>
+
   <li class="nav-item">
     <button (click)="logOut()" *ngIf="userLogado.email" class="btn btn-danger">
       <i class="fa-solid fa-arrow-right-from-bracket"></i>

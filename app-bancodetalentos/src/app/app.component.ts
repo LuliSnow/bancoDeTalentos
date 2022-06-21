@@ -19,7 +19,6 @@ export class AppComponent {
     let token: string | null = localStorage.getItem('token');
     if (token != null) {
       token = this.decodeToken.decodeTokenJWT();
-      //let decode = JSON.parse(token)
       this.userLogado = token;
     }
   }
