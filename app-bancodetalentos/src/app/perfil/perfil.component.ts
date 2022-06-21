@@ -58,6 +58,6 @@ export class PerfilComponent implements OnInit {
     if (this.cadastroService.apagar(id).subscribe()) {
       localStorage.removeItem('token');
     }
-    window.location.href = 'login';
+    window.location.href = '';
   }
 }
