@@ -1,27 +1,38 @@
  <body class="animate__animated animate__fadeInLeft">
 
-   <div class="container">
-     <h2>Login</h2>
-     <form #f="ngForm" (ngSubmit)="fazerLogin(f.value)">
-       <input required class="form-control" type="email" #femail="ngModel" ngModel name="email" placeholder="E-mail" />
-       <div *ngIf="femail.invalid" class="ng-invalid">Informe seu e-mail</div>
+   <div id="div-principal" class="row justify-content-center">
 
-       <div class="eyeicon">
-         <input required class="form-control" [type]="changetype?'password':'text'" #fpassword="ngModel" ngModel
-           name="password" placeholder="Senha" />
-         <span (click)="viewPassword()"><i [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
-       </div>
+     <div class="col-md-6">
+       <form #f="ngForm" (ngSubmit)="fazerLogin(f.value)">
+         <h2>Login</h2>
 
-       <div *ngIf="fpassword.invalid" class="ng-invalid">Informe sua senha</div>
-       <span class="mensagem">{{ msg }}</span>
+         <div class="">
+           <input required class="form-control" type="email" #femail="ngModel" ngModel name="email"
+             placeholder="E-mail" />
+           <div *ngIf="femail.invalid" class="ng-invalid">Informe seu e-mail</div>
+         </div>
 
-       <div class="botao">
-         <button [disabled]="f.invalid" class="btn mt-2">Entrar</button>
-       </div>
-       <div class="link">
-         <a routerLink="/cadastro">Não tenho cadastro</a>
-       </div>
-     </form>
+         <div class="">
+           <div class="eyeicon">
+             <input required class="form-control" [type]="changetype?'password':'text'" #fpassword="ngModel" ngModel
+               name="password" placeholder="Senha" />
+             <span (click)="viewPassword()"><i [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
+           </div>
+
+           <div *ngIf="fpassword.invalid" class="ng-invalid">Informe sua senha</div>
+           <span class="mensagem">{{ msg }}</span>
+         </div>
+         <div class="botao">
+           <button [disabled]="f.invalid" class="btn mt-2">Entrar</button>
+         </div>
+
+         <div class="link">
+           <a routerLink="/cadastro">Não tenho cadastro</a>
+         </div>
+
+       </form>
+     </div>
    </div>
-   <img src="../../assets/imagens/talentlogin.svg" alt="Talent Empowerment. Banco de Talentos" />
+
+
    <router-outlet></router-outlet>

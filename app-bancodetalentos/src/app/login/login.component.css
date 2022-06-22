@@ -1,21 +1,28 @@
 body {
+  height: 100%;
+  background-color: rgb(212, 184, 184);
   background-image: url(../../assets/imagens/login.svg);
   background-repeat: no-repeat;
   background-position: left top;
-  background-size: 70vw;
-  background-clip: padding-box;
 }
 
-.container {
-  margin-top: 9%;
-  margin-left: 14%;
+#div-principal {
   position: absolute;
-  max-width: 40vw;
-  position: left;
+  top: 130px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 20px;
+  padding: 20px;
 }
 
 div.ng-invalid {
-  color: white;
+  color: red;
   font-size: smaller;
   font-style: italic;
   margin-bottom: 10px;
@@ -28,7 +35,7 @@ div.ng-invalid {
 }
 
 h2 {
-  color: white;
+  color: black;
   padding-bottom: 20px;
   text-align: center;
 }
@@ -45,7 +52,8 @@ h2 {
 }
 
 a {
-  color: white;
+  color: black;
+  font-weight: 500;
   margin-left: 5px;
 }
 
@@ -60,6 +68,7 @@ input {
 }
 
 button {
+  font-weight: 500;
   color: white;
   background-color: rgba(165, 42, 42, 0.87)
 }
@@ -67,6 +76,7 @@ button {
 button:hover {
   background-color: white;
   color: rgba(165, 42, 42, 0.87);
+  border: 1px solid rgba(165, 42, 42, 0.87);
 }
 
 .link {
@@ -75,8 +85,6 @@ button:hover {
 }
 
 img {
-  margin-right: 4%;
-  float: right;
-  max-width: 40%;
   margin-top: 17%;
+  width: 100%;
 }
