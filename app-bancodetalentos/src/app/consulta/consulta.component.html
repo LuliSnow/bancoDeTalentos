@@ -1,18 +1,19 @@
 <div class="container-fluid mt-3">
+
   <div class="text-center mb-3">
     <h5>Faça aqui a sua busca! Você pode pesquisar por área, estado, cidade, profissão ou até mesmo pelo nome do
       talento!</h5>
   </div>
-  <form class="search d-flex justify-content-center">
-    <div class="col-md-7 me-2">
-      <input class="form-control" type="text" placeholder="Busca..." aria-label="Search" name="search"
-        [(ngModel)]="filter">
-    </div>
 
-    <button class="btn" type="submit">
-      <i class="material-icons align-middle" style="font-size:24px">search</i>
-    </button>
+  <form class="search d-flex justify-content-center">
+    <div class="col-md-7 search-box">
+      <button class="btn-search">
+        <i class="material-icons align-middle" style="font-size:25px">search</i>
+      </button>
+      <input class="input-search" type="text" placeholder="Busca..." name="search" [(ngModel)]="filter">
+    </div>
   </form>
+
 </div>
 
 <div class="row row-cols-1 row-cols-md-4 g-4">
@@ -26,7 +27,7 @@
         <div class='card-title bg-danger text-center'>{{ talento.nome }} {{ talento.sobrenome }}</div>
 
         <!--IMAGEM-->
-        <img class="card-img-top" src="../../assets/imagens/menina.jpg">
+        <img id="imagem" class="card-img-top" [src]="talento.imagem">
 
         <!--PROFISSÃO-->
         <div class="card-text"><i class="material-icons">&#xe8f9;</i>{{ talento.profissao }}</div>

@@ -55,3 +55,8 @@ div {
 input {
   margin-bottom: 12px;
 }
+
+.imagem {
+  border-radius: 15px;
+  padding: 0;
+}

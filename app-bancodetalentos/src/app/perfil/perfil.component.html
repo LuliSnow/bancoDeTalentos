@@ -2,6 +2,11 @@
   <div class="row justify-content-center mt-5" id="formulario">
     <h2 class="text-center">Editar perfil</h2>
     <div class="row col col-lg-9" id="editar">
+
+      <div class="row col-md-3 mb-2">
+        <img class="imagem img-responsive" [src]="talento.imagem">
+      </div>
+
       <div class="col-md-4">
         <label class="form-label">Nome</label>
         <input class="form-control" type="text" [(ngModel)]="talento.nome">
@@ -12,7 +17,7 @@
         <input class="form-control" type="text" [(ngModel)]="talento.sobrenome">
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-6">
         <label class="form-label">Fone</label>
         <input class="form-control" type="text" [(ngModel)]="talento.fone">
       </div>
@@ -80,6 +85,12 @@
           <option value="SE">Sergipe - SE</option>
           <option value="TO">Tocantins - TO</option>
         </select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Foto</label>
+        <input name="imagem" type="text" id="imagem" placeholder="Coloque o link da foto" class="form-control"
+          [(ngModel)]="talento.imagem" />
       </div>
 
       <div class="mt-3">

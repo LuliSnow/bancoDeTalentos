@@ -130,10 +130,10 @@
         <div class="col-md-4">
           <fieldset>
             <legend>Foto:</legend>
-            <input #imagem="ngModel" ngModel name="imagem" type="file" id="imagem" placeholder="Envie uma foto sua"
+            <input #imagem="ngModel" ngModel name="imagem" type="text" id="imagem" placeholder="Coloque o link da foto"
               class="form-control" required />
             <div *ngIf="imagem.invalid" class="ng-invalid invalid-feedback" id="validacao">
-              Anexe uma foto sua.
+              Cole o link da foto.
             </div>
           </fieldset>
         </div>
