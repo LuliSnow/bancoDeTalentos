@@ -2,7 +2,7 @@ import { InformacoesComponent } from './informacoes/informacoes.component';
 import { AuthPerfilService } from './auth-perfil.service';
 import { PerfilComponent } from './perfil/perfil.component';
 import { LoginComponent } from './login/login.component';
-import { Component, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ConsultaComponent } from './consulta/consulta.component';

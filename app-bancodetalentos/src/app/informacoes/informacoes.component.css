@@ -34,17 +34,6 @@ label {
   font-weight: 600;
 }
 
-.eyeicon {
-  position: relative;
-  cursor: pointer;
-}
-
-.eyeicon i {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
 #infor {
   margin-top: 20px;
   background-color: rosybrown;

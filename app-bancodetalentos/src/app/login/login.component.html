@@ -16,7 +16,8 @@
            <div class="eyeicon">
              <input required class="form-control" [type]="changetype?'password':'text'" #fpassword="ngModel" ngModel
                name="password" placeholder="Senha" />
-             <span (click)="viewPassword()"><i [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></i></span>
+             <span (click)="viewPassword()"><em
+                 [ngClass]="visible?'fa-solid fa-eye':'fa-solid fa-eye-slash'"></em></span>
            </div>
 
            <div *ngIf="fpassword.invalid" class="ng-invalid">Informe sua senha</div>

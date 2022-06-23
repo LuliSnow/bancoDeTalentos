@@ -38,7 +38,7 @@
   font-size: 21px;
 }
 
-i {
+em {
   color: crimson;
 }
 
@@ -48,7 +48,7 @@ button {
 
 
 /* Input search */
-button i {
+button em {
   color: black;
 }
 

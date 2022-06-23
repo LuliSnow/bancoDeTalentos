@@ -9,7 +9,6 @@ export class AuthenticationService {
 
   login(email: string, password: string) {
     let url = 'https://app-banco-talentos.herokuapp.com/talentos/login';
-    //let url = 'http://localhost:8080/talentos/login';
     return this.http.post(url, {
       email: email,
       password: password,
