@@ -20,8 +20,8 @@ export class AuthPerfilService implements CanActivate {
   ) {}
 
   canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+    _route: ActivatedRouteSnapshot,
+    _state: RouterStateSnapshot
   ): boolean | Observable<boolean> {
     if (!this.userLogado()) {
       this.router.navigate(['/login']);

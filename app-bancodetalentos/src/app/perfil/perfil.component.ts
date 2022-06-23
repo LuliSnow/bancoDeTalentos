@@ -49,7 +49,7 @@ export class PerfilComponent implements OnInit {
   }
 
   editar() {
-    this.cadastroService.alterar(this.talento).subscribe((x) => {
+    this.cadastroService.alterar(this.talento).subscribe((_x) => {
       this.msg = 'Alterado com sucesso.';
     });
   }

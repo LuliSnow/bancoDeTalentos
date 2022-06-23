@@ -27,13 +27,12 @@ export class CadastroService {
   }
 
   alterar(dados: any) {
-    let url = `https://app-banco-talentos.herokuapp.com/talentos/${dados.id}`;
-    //let url = `http://localhost:8080/talentos/${dados.id}`;
+    //let url = `https://app-banco-talentos.herokuapp.com/talentos/${dados.id}`;
+    let url = `http://localhost:8080/talentos/${dados.id}`;
     return this.http.put(url, dados);
   }
 
   apagar(idtalento: number) {
-    //return this.http.delete(`https://app-banco-talentos.herokuapp.com/talentos/${idtalento}`)
     return this.http.delete(
       `https://app-banco-talentos.herokuapp.com/talentos/${idtalento}`
     );

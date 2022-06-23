@@ -17,7 +17,7 @@ export class LoginComponent {
         localStorage.setItem('token', data);
         window.location.href = 'home';
       },
-      (error) => (this.msg = 'Email ou senha incorretos!')
+      (_error) => (this.msg = 'Email ou senha incorretos!')
     );
   }
 

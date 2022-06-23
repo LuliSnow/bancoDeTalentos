@@ -24,8 +24,8 @@ export class CadastroComponent {
 
   createTalent(data: any) {
     this.serviceCadastro.create(data).subscribe((response) => {
-      let data = JSON.stringify(response);
-      let dados = JSON.parse(data);
+      let userData = JSON.stringify(response);
+      let dados = JSON.parse(userData);
       if (dados.message == 'Email já existe!') {
         return (this.msgerr = 'Email já cadastrado!');
       } else {
