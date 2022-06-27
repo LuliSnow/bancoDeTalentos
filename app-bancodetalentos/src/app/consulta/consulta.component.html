@@ -16,15 +16,15 @@
 
 </div>
 
-<div class="row row-cols-1 row-cols-md-4 g-4">
-  <div id="card" *ngFor="let talento of talentos | filter:filter; let i = index">
+<div class="row row-cols-1 row-cols-lg-4 g-4">
+  <div id="card" *ngFor="let talento of talentos | filter:filter">
     <div class='border-danger card col m-3'>
       <div class='card-body'>
         <!--AREA PROFISSIONAL-->
         <div class="card-header text-center">{{ talento.area }}</div>
 
         <!-- NOME -->
-        <div class='card-title bg-danger text-center'>{{ talento.nome }} {{ talento.sobrenome }}</div>
+        <div class='card-title bg-danger text-center overflow-hidden'>{{ talento.nome }} {{ talento.sobrenome }}</div>
 
         <!--IMAGEM-->
         <img id="imagem" alt="Imagem do talento" class="card-img-top" [src]="talento.imagem">
