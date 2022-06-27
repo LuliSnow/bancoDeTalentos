@@ -5,7 +5,7 @@
       talento!</h5>
   </div>
 
-  <form class="search d-flex justify-content-center">
+  <form class="search d-flex justify-content-center mb-3">
     <div class="col-md-7 search-box">
       <button class="btn-search">
         <em class="material-icons align-middle" style="font-size:25px">search</em>
@@ -16,9 +16,9 @@
 
 </div>
 
-<div class="row row-cols-1 row-cols-lg-4 g-4">
+<div class="row row-cols-lg-4 g-0">
   <div id="card" *ngFor="let talento of talentos | filter:filter">
-    <div class='border-danger card col m-3'>
+    <div class='border-danger card col m-2'>
       <div class='card-body'>
         <!--AREA PROFISSIONAL-->
         <div class="card-header text-center">{{ talento.area }}</div>
@@ -37,9 +37,13 @@
 
         <!--EMAIL E TELEFONE-->
         <div class="card-footer">
-          <em class="material-icons">&#xe0b0;</em>{{ talento.fone }}
+
+          <span><em class="material-icons">&#xe0b0;</em>
+            {{ talento.fone }}</span>
           <br>
-          <em class="material-icons">&#xe0be;</em>{{ talento.email }}
+          <span><em class="material-icons">&#xe0be;</em>
+            {{ talento.email }}</span>
+
           <br>
           <a [routerLink]="['/informacoes/', talento.id]">Mais informações...</a>
         </div>
